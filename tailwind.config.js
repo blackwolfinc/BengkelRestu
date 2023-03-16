@@ -3,7 +3,21 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      fontFamily: { jura: ["Jura", "sans-serif"] },
+      fontFamily: {
+        jura: ["Jura", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+      },
+      colors: {
+        "primary-dark": "#001F49",
+        "primary-light": "#005C93",
+        active: "#18C234",
+      },
+      maxWidth: {
+        lg: "1280px",
+      },
+      width: {
+        lg: "1280px",
+      },
     },
   },
   plugins: [],
