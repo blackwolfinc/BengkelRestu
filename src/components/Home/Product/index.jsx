@@ -34,11 +34,12 @@ const ProductData = [
   },
 ];
 
-const Product = () => {
+const Product = (props) => {
+  const { className = "" } = props;
   const [selectedProduct, setSelectedProduct] = useState(0);
 
   return (
-    <div className="min-w-full">
+    <div className={`min-w-full ${className}`}>
       <div className="flex max-w-lg">
         <div className="flex-1 divide-y-4 divide-white/20 bg-primary-light/80 px-10 py-14">
           <h3 className="pb-3 text-3xl font-bold text-white drop-shadow-text">
@@ -82,7 +83,7 @@ const ProductItem = (props) => {
 
   return (
     <div
-      className={`cursor-pointer rounded-lg bg-primary-dark/60 p-4 transition-all ease-in-out hover:bg-primary-dark ${
+      className={`cursor-pointer rounded-lg p-4 transition-all ease-in-out hover:bg-primary-dark ${
         active ? "bg-primary-dark" : "bg-primary-dark/60"
       }`}
       onClick={onClick}
