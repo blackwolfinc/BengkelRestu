@@ -9,10 +9,10 @@ import { HiOutlineMail } from "react-icons/hi";
 
 const Footer = () => {
   return (
-    <footer className="min-w-full bg-primary-dark/90 text-white">
+    <footer className="min-w-full bg-primary-dark/90 text-white max-desktop:bg-primary-dark">
       <div className="mx-auto max-w-lg">
         <div className="flex w-lg">
-          <div className="flex divide-x-2 divide-white/30">
+          <div className="flex divide-x-2 divide-white/30 max-desktop:flex-col max-desktop:divide-x-0 max-desktop:py-8">
             <div className="flex flex-col gap-1 p-6">
               <h6>ADDRESS</h6>
               <div className="flex items-center gap-2 text-sm">
@@ -41,7 +41,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="ml-auto flex flex-col justify-center gap-2 px-6">
+          <div className="ml-auto flex flex-col justify-center gap-2 px-6 max-desktop:hidden">
             <div className="flex items-center gap-3">
               <AiFillFacebook size={24} />
               <p className="font-jura text-xs">Bengkel Restu Teknik</p>

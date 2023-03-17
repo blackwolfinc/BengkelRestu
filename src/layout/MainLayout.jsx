@@ -5,19 +5,21 @@ import Navbar from "../components/Navbar";
 import { MenuContext } from "../helpers/context";
 import useWindowDimensions from "../helpers/useWindowDimension";
 import DummyImage1 from "../assets/img/welding-bg.png";
+import DummyImage2 from "../assets/img/welding-bg-2.png";
 
 const MainLayout = ({ children }) => {
-  const { height } = useWindowDimensions();
+  const { width, height } = useWindowDimensions();
   const [currentMenu, setCurrentMenu] = useState("home"); // home, about, product, ourwork
 
   return (
     <MenuContext.Provider value={{ currentMenu, setCurrentMenu }}>
-      <div className="max-h-screen w-screen overflow-x-hidden scrollbar-thin scrollbar-thumb-primary-light">
-        <ImageBackground images={[DummyImage1]}>
+      <div className="w-screen overflow-x-hidden scrollbar-thin scrollbar-thumb-primary-light">
+        <ImageBackground
+          images={[DummyImage1, DummyImage2]}
+          disabled={width < 1280}
+        >
           <Navbar />
-          <div className="my-10" style={{ minHeight: `${height - 297}px` }}>
-            {children}
-          </div>
+          <div style={{ minHeight: `${height - 256}px` }}>{children}</div>
           <Footer />
         </ImageBackground>
       </div>

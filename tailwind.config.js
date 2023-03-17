@@ -9,6 +9,7 @@ module.exports = {
       },
       colors: {
         "primary-dark": "#001F49",
+        "primary-dark-2": "#0B284D",
         "primary-light": "#005C93",
         active: "#18C234",
       },
@@ -20,6 +21,9 @@ module.exports = {
       },
       dropShadow: {
         text: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+      },
+      screens: {
+        desktop: "1280px",
       },
     },
   },
