@@ -6,10 +6,14 @@ import {
   AiOutlineInstagram,
 } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
+import { SOCIAL_MEDIA_LINK } from "../../constants/socialMediaLink";
 
 const Footer = () => {
   return (
-    <footer className="min-w-full bg-primary-dark/90 text-white max-desktop:bg-primary-dark">
+    <footer
+      id="footer"
+      className="min-w-full bg-primary-dark/90 text-white max-desktop:bg-primary-dark"
+    >
       <div className="mx-auto max-w-lg">
         <div className="flex w-lg">
           <div className="flex divide-x-2 divide-white/30 max-desktop:flex-col max-desktop:divide-x-0 max-desktop:py-8">
@@ -42,14 +46,24 @@ const Footer = () => {
             </div>
           </div>
           <div className="ml-auto flex flex-col justify-center gap-2 px-6 max-desktop:hidden">
-            <div className="flex items-center gap-3">
+            <a
+              href={SOCIAL_MEDIA_LINK.FACEBOOK}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-3 transition-all ease-in-out hover:text-active"
+            >
               <AiFillFacebook size={24} />
               <p className="font-jura text-xs">Bengkel Restu Teknik</p>
-            </div>
-            <div className="flex items-center gap-3">
+            </a>
+            <a
+              href={SOCIAL_MEDIA_LINK.INSTAGRAM}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-3 transition-all ease-in-out hover:text-active"
+            >
               <AiOutlineInstagram size={24} />
               <p className="font-jura text-xs">Bengkel Restu Teknik</p>
-            </div>
+            </a>
           </div>
         </div>
       </div>

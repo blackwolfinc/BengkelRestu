@@ -5,6 +5,7 @@ import DummyImage1 from "../../../assets/img/welding-bg.png";
 import DummyImage2 from "../../../assets/img/welding-bg-2.png";
 import useWindowDimensions from "../../../helpers/useWindowDimension";
 import { AiFillFacebook, AiFillInstagram } from "react-icons/ai";
+import { SOCIAL_MEDIA_LINK } from "../../../constants/socialMediaLink";
 
 const HomeText = (props) => {
   const { className = "" } = props;
@@ -44,7 +45,7 @@ const HomeText = (props) => {
         </button>
         <div className="mt-20 hidden items-center justify-center gap-4 max-desktop:flex">
           <a
-            href="https://www.facebook.com/"
+            href={SOCIAL_MEDIA_LINK.FACEBOOK}
             target="_blank"
             rel="noreferrer"
             className="flex items-center justify-center gap-1 text-white"
@@ -53,7 +54,7 @@ const HomeText = (props) => {
             <span className="font-jura text-xs">Bengkel Restu Teknik</span>
           </a>
           <a
-            href="https://www.facebook.com/"
+            href={SOCIAL_MEDIA_LINK.INSTAGRAM}
             target="_blank"
             rel="noreferrer"
             className="flex items-center justify-center gap-1 text-white"

@@ -4,7 +4,9 @@ const AboutText = (props) => {
   const { className = "" } = props;
 
   return (
-    <div className={`w-fit bg-primary-light/80 p-8 text-white ${className}`}>
+    <div
+      className={`w-fit bg-primary-light/80 p-8 text-white ${className}`}
+    >
       <div className="w-[1000px] pr-40 max-desktop:w-full max-desktop:p-0">
         <h3 className="mb-4 text-3xl font-bold drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
           ABOUT US

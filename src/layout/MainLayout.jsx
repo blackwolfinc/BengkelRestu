@@ -10,6 +10,7 @@ import DummyImage2 from "../assets/img/welding-bg-2.png";
 const MainLayout = ({ children }) => {
   const { width, height } = useWindowDimensions();
   const [currentMenu, setCurrentMenu] = useState("home"); // home, about, product, ourwork
+  const menuControlActive = ["home", "about", "ourwork"];
 
   return (
     <MenuContext.Provider value={{ currentMenu, setCurrentMenu }}>
@@ -17,6 +18,7 @@ const MainLayout = ({ children }) => {
         <ImageBackground
           images={[DummyImage1, DummyImage2]}
           disabled={width < 1280}
+          control={menuControlActive.includes(currentMenu)}
         >
           <Navbar />
           <div style={{ minHeight: `${height - 256}px` }}>{children}</div>
