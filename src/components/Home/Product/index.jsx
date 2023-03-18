@@ -45,7 +45,7 @@ const Product = (props) => {
           <h3 className="pb-3 text-3xl font-bold text-white drop-shadow-text max-desktop:text-xl">
             Produk-Produk Restu Teknik
           </h3>
-          <div className="grid max-h-[500px] grid-cols-2 gap-6 overflow-y-scroll pr-4 pt-7 scrollbar-thin scrollbar-thumb-primary-dark/40">
+          <div className="grid max-h-[500px] grid-cols-2 gap-6 overflow-y-scroll pr-4 pt-7 scrollbar-thin scrollbar-thumb-primary-dark/40 max-md:grid-cols-1">
             {ProductData.map((item, index) => {
               return (
                 <ProductItem
