@@ -14,7 +14,7 @@ const MainLayout = ({ children }) => {
 
   return (
     <MenuContext.Provider value={{ currentMenu, setCurrentMenu }}>
-      <div className="w-screen overflow-x-hidden scrollbar-thin scrollbar-thumb-primary-light">
+      <div className="max-h-screen w-screen overflow-x-hidden overflow-y-scroll scrollbar-thin scrollbar-thumb-primary-light">
         <ImageBackground
           images={[DummyImage1, DummyImage2]}
           disabled={width < 1280}
