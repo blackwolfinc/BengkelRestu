@@ -1,38 +1,5 @@
 import React, { useState } from "react";
-import DummyImage from "../../../assets/img/bubut.png";
-
-const ProductData = [
-  {
-    image: DummyImage,
-    title: "Bubut Professional",
-    description:
-      "Proses Bubut Yang di lakukan oleh tenaga Ahli di bidangnya dengan setandar multinasional di lakukan secara detail dan perlahan 1",
-  },
-  {
-    image: DummyImage,
-    title: "Las Professional",
-    description:
-      "Proses Bubut Yang di lakukan oleh tenaga Ahli di bidangnya dengan setandar multinasional di lakukan secara detail dan perlahan 2",
-  },
-  {
-    image: DummyImage,
-    title: "Bubut Professional",
-    description:
-      "Proses Bubut Yang di lakukan oleh tenaga Ahli di bidangnya dengan setandar multinasional di lakukan secara detail dan perlahan 3",
-  },
-  {
-    image: DummyImage,
-    title: "Las Professional",
-    description:
-      "Proses Bubut Yang di lakukan oleh tenaga Ahli di bidangnya dengan setandar multinasional di lakukan secara detail dan perlahan 4",
-  },
-  {
-    image: DummyImage,
-    title: "Bubut Professional",
-    description:
-      "Proses Bubut Yang di lakukan oleh tenaga Ahli di bidangnya dengan setandar multinasional di lakukan secara detail dan perlahan 5",
-  },
-];
+import ProductData from "../../../data/ProductData";
 
 const Product = (props) => {
   const { className = "" } = props;
@@ -42,8 +9,8 @@ const Product = (props) => {
     <div className={`min-w-full ${className}`}>
       <div className="flex max-w-lg max-desktop:flex-col">
         <div className="flex-1 divide-y-4 divide-white/20 bg-primary-light/80 px-10 py-14">
-          <h3 className="pb-3 text-3xl font-bold text-white drop-shadow-text max-desktop:text-xl">
-            Produk-Produk Restu Teknik
+          <h3 className="pb-3 text-2xl font-bold text-white drop-shadow-text max-desktop:text-xl">
+            Produk dan Jasa Bengkel Restu Teknik
           </h3>
           <div className="grid max-h-[500px] grid-cols-2 gap-6 overflow-y-scroll pr-4 pt-7 scrollbar-thin scrollbar-thumb-primary-dark/40 max-md:grid-cols-1">
             {ProductData.map((item, index) => {

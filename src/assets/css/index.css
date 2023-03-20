@@ -7,6 +7,10 @@
   font-family: "Inter", sans-serif;
 }
 
+body {
+  @apply overflow-x-hidden !scrollbar-thin scrollbar-thumb-primary-light;
+}
+
 .bg {
   background: url(../img/welding-bg.png);
   background-size: cover;
