@@ -2,10 +2,16 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import LogoLG from "../../assets/img/logo-lg.png";
 import LogoMD from "../../assets/img/logo-md.png";
+import ProductData from "../../data/ProductData";
 import { MenuContext } from "../../helpers/context";
 
 const Navbar = () => {
-  const { currentMenu, setCurrentMenu } = useContext(MenuContext);
+  const {
+    currentMenu,
+    setCurrentMenu,
+    selectedDetailProduct,
+    setSelectedDetailProduct,
+  } = useContext(MenuContext);
 
   const defaultTextStyles =
     "font-jura text-white transition-all duration-150 ease-in-out hover:text-active";
@@ -62,16 +68,23 @@ const Navbar = () => {
               Our Work
             </Link>
             <div className="flex gap-10">
-              <Link className={`${defaultTextStyles} text-lg`}>
-                Gear Manufacturing
-              </Link>
-              <Link className={`${defaultTextStyles} text-lg`}>
-                General Machine Process
-              </Link>
-              <Link className={`${defaultTextStyles} text-lg`}>Automotive</Link>
-              <Link className={`${defaultTextStyles} text-lg`}>
-                Construction
-              </Link>
+              {ProductData?.map((product, index) => (
+                <Link
+                  key={index}
+                  className={`${defaultTextStyles} text-lg ${
+                    selectedDetailProduct === index &&
+                    currentMenu === "detailproduct" &&
+                    "!text-active"
+                  }`}
+                  to={`#detailproduct-${index}`}
+                  onClick={() => {
+                    setCurrentMenu("detailproduct");
+                    setSelectedDetailProduct(index);
+                  }}
+                >
+                  {product?.title}
+                </Link>
+              ))}
             </div>
           </div>
         </div>

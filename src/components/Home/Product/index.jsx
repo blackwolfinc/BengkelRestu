@@ -26,11 +26,11 @@ const Product = (props) => {
           </div>
         </div>
         <div className="flex-1 bg-primary-dark/80 py-14 px-10">
-          <div className="mb-4 aspect-video w-full">
+          <div className="mb-4 aspect-video w-full overflow-hidden">
             <img
               src={ProductData[selectedProduct]?.image}
               alt="Product"
-              className="min-h-full min-w-full"
+              className="min-h-full min-w-full object-cover"
             />
           </div>
           <h3 className="mb-3 text-3xl font-bold text-white drop-shadow-text">
@@ -55,8 +55,12 @@ const ProductItem = (props) => {
       }`}
       onClick={onClick}
     >
-      <div className="mb-2 aspect-video w-full">
-        <img src={image} alt="Product 1" className="min-h-full min-w-full" />
+      <div className="mb-2 aspect-video w-full overflow-hidden">
+        <img
+          src={image}
+          alt="Product 1"
+          className="min-h-full min-w-full object-cover"
+        />
       </div>
       <h6 className="text-lg font-bold text-white">{title}</h6>
     </div>

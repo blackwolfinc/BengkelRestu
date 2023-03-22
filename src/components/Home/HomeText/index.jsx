@@ -29,7 +29,7 @@ const HomeText = (props) => {
             <div className="text-sm drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] max-desktop:hidden">
               <p className="mb-2 text-justify">
                 Semua informasi mengenai Bengkel Restu Teknik dapat anda lihat
-                dalam website ini. Silahkan kontak kami 0857-8425-8128 (WA)
+                dalam website ini. Silahkan kontak kami 0821-4547-3960 (WA)
                 untuk mendapatkan informasi lain yang anda perlukan.
               </p>
               <p className="font-semibold">Follow us</p>

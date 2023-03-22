@@ -6,10 +6,13 @@ import HomeText from "../../components/Home/HomeText";
 import OurWorkText from "../../components/Home/OurWorkText";
 import Product from "../../components/Home/Product";
 import Map from "../../components/Home/Map";
+import DetailProduct from "../../components/Home/DetailProduct";
+import ProductData from "../../data/ProductData";
 
 const Home = () => {
-  const { currentMenu } = useContext(MenuContext);
+  const { currentMenu, selectedDetailProduct } = useContext(MenuContext);
   const menuShowMap = ["home", "about", "ourwork"];
+  const menuShowFloatingHubungi = ["home", "about", "ourwork"];
 
   return (
     <>
@@ -34,12 +37,18 @@ const Home = () => {
             currentMenu === "product" ? "" : "desktop:hidden"
           } max-desktop:order-1`}
         />
+        <DetailProduct
+          className={`max-desktop:pt-20 ${
+            currentMenu === "detailproduct" ? "" : "hidden"
+          }`}
+          {...ProductData[selectedDetailProduct]}
+        />
         <Map
           className={`mt-4 ml-10 ${
             menuShowMap.includes(currentMenu) ? "" : "hidden"
           } max-desktop:order-3 max-desktop:m-4 max-desktop:mx-auto`}
         />
-        {currentMenu !== "product" && <FloatingHubungi />}
+        {menuShowFloatingHubungi.includes(currentMenu) && <FloatingHubungi />}
       </main>
     </>
   );
