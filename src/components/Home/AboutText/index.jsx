@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { IoClose } from "react-icons/io5";
+import { MenuContext } from "../../../helpers/context";
 
 const AboutText = (props) => {
+  const { setCurrentMenu } = useContext(MenuContext);
   const { className = "" } = props;
 
   return (
     <div className={`w-fit bg-primary-light/80 p-8 text-white ${className}`}>
-      <div className="w-[1000px] pr-40 max-desktop:w-full max-desktop:p-0">
+      <div className="relative w-[1000px] pr-40 max-desktop:w-full max-desktop:p-0">
         <h3 className="mb-4 text-3xl font-bold drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
           ABOUT US
         </h3>
@@ -17,6 +20,12 @@ const AboutText = (props) => {
             kami WA : 0821-4547-3960
           </p>
         </div>
+        <button
+          className="absolute top-0 right-0 transition-all hover:text-primary-dark max-desktop:hidden"
+          onClick={() => setCurrentMenu("home")}
+        >
+          <IoClose size={24} />
+        </button>
       </div>
     </div>
   );

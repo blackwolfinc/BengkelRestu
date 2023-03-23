@@ -20,7 +20,7 @@ const HomeText = (props) => {
     >
       <div className="relative z-10 max-desktop:flex max-desktop:min-h-screen max-desktop:flex-col max-desktop:bg-primary-dark/70 max-desktop:pt-[120px] max-desktop:pb-10">
         <div
-          className={`w-fit bg-primary-light/80 p-8 text-white max-desktop:mx-auto`}
+          className={`w-fit bg-primary-light/80 p-8 text-white max-desktop:mx-auto max-desktop:animate-[fadeOut_2s_ease-in-out_forwards_1s]`}
         >
           <div className="w-[500px] pr-20 max-desktop:w-fit max-desktop:p-0">
             <h3 className="mb-4 text-3xl font-bold drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] max-desktop:mb-0 max-md:text-lg">

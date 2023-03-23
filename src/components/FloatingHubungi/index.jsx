@@ -54,7 +54,7 @@ const FloatingHubungi = () => {
           <AiOutlineWhatsApp size={40} />
         </div>
         <span className="font-jura text-3xl font-bold text-white max-desktop:hidden">
-          Las Professional
+          Bengkel Restu Teknik
         </span>
       </a>
     </>

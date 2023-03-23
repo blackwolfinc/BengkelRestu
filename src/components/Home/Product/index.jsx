@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { IoMdArrowRoundForward } from "react-icons/io";
 import ProductData from "../../../data/ProductData";
+import { MenuContext } from "../../../helpers/context";
 
 const Product = (props) => {
+  const { setCurrentMenu, setSelectedDetailProduct } = useContext(MenuContext);
   const { className = "" } = props;
   const [selectedProduct, setSelectedProduct] = useState(0);
 
@@ -25,7 +28,7 @@ const Product = (props) => {
             })}
           </div>
         </div>
-        <div className="flex-1 bg-primary-dark/80 py-14 px-10">
+        <div className="flex flex-1 flex-col bg-primary-dark/80 py-14 px-10">
           <div className="mb-4 aspect-video w-full overflow-hidden">
             <img
               src={ProductData[selectedProduct]?.image}
@@ -33,12 +36,26 @@ const Product = (props) => {
               className="min-h-full min-w-full object-cover"
             />
           </div>
-          <h3 className="mb-3 text-3xl font-bold text-white drop-shadow-text">
-            {ProductData[selectedProduct]?.title}
-          </h3>
-          <p className="text-justify text-sm font-medium leading-6 text-white">
-            {ProductData[selectedProduct]?.description}
-          </p>
+          <div className="flex flex-1 flex-col">
+            <h3 className="mb-3 text-3xl font-bold text-white drop-shadow-text">
+              {ProductData[selectedProduct]?.title}
+            </h3>
+            <p className="text-justify text-sm font-medium leading-6 text-white">
+              {ProductData[selectedProduct]?.description}
+            </p>
+            <div className="mt-auto">
+              <button
+                className="mt-8 flex w-fit items-center gap-2 border-b-2 border-b-transparent font-bold text-white transition-all hover:border-b-white"
+                onClick={() => {
+                  setCurrentMenu("detailproduct");
+                  setSelectedDetailProduct(selectedProduct);
+                }}
+              >
+                <span>Lihat Detail </span>
+                <IoMdArrowRoundForward />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
