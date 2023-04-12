@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import ProductData from "../../../data/ProductData";
 import { MenuContext } from "../../../helpers/context";
+import { Link } from "react-router-dom";
 
 const Product = (props) => {
   const { setCurrentMenu, setSelectedDetailProduct } = useContext(MenuContext);
@@ -45,7 +46,7 @@ const Product = (props) => {
             </p>
             <div className="mt-auto">
               <button
-                className="mt-8 flex w-fit items-center gap-2 border-b-2 border-b-transparent font-bold text-white transition-all hover:border-b-white"
+                className="mt-8 flex w-fit items-center gap-2 border-b-2 border-b-transparent font-bold text-white transition-all hover:border-b-white max-desktop:hidden"
                 onClick={() => {
                   setCurrentMenu("detailproduct");
                   setSelectedDetailProduct(selectedProduct);
@@ -54,6 +55,13 @@ const Product = (props) => {
                 <span>Lihat Detail </span>
                 <IoMdArrowRoundForward />
               </button>
+              <Link
+                to={`/product/${selectedProduct}`}
+                className="mt-8 hidden w-fit items-center gap-2 border-b-2 border-b-transparent font-bold text-white transition-all hover:border-b-white max-desktop:flex"
+              >
+                <span>Lihat Detail </span>
+                <IoMdArrowRoundForward />
+              </Link>
             </div>
           </div>
         </div>

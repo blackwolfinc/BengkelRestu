@@ -41,7 +41,7 @@ const Navbar = () => {
               className={`${defaultTextStyles} text-lg uppercase ${
                 currentMenu === "about" && "!text-active"
               }`}
-              to={"#about"}
+              to={"/#about"}
               onClick={() => setCurrentMenu("about")}
             >
               About Us
@@ -50,7 +50,7 @@ const Navbar = () => {
               className={`${defaultTextStyles} text-lg uppercase ${
                 currentMenu === "product" && "!text-active"
               }`}
-              to={"#product"}
+              to={"/#product"}
               onClick={() => setCurrentMenu("product")}
             >
               Product
@@ -62,7 +62,7 @@ const Navbar = () => {
               className={`${defaultTextStyles} text-lg uppercase ${
                 currentMenu === "ourwork" && "!text-active"
               }`}
-              to={"#ourwork"}
+              to={"/#ourwork"}
               onClick={() => setCurrentMenu("ourwork")}
             >
               Our Work
@@ -76,7 +76,7 @@ const Navbar = () => {
                     currentMenu === "detailproduct" &&
                     "!text-active"
                   }`}
-                  to={`#detailproduct-${index}`}
+                  to={`/#detailproduct-${index}`}
                   onClick={() => {
                     setCurrentMenu("detailproduct");
                     setSelectedDetailProduct(index);

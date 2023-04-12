@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home";
+import Product from "../pages/Product";
 
 const Routers = () => {
   return (
@@ -13,7 +14,15 @@ const Routers = () => {
             <Home />
           </MainLayout>
         }
-      ></Route>
+      />
+      <Route
+        path="/product/:id"
+        element={
+          <MainLayout>
+            <Product />
+          </MainLayout>
+        }
+      />
       <Route path="*" element={<div>Not Found</div>}></Route>
     </Routes>
   );

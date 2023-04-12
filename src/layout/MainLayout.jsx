@@ -30,7 +30,7 @@ const MainLayout = ({ children }) => {
           times={10000}
         >
           <Navbar />
-          <div style={{ minHeight: `${height - 256}px` }}>{children}</div>
+          <div style={{ minHeight: `${height - 216}px` }}>{children}</div>
           <Footer />
         </ImageBackground>
       </div>

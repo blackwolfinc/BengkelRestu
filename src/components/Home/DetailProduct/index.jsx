@@ -41,8 +41,10 @@ const DetailProduct = (props) => {
                   alt="Product"
                   className="min-h-full min-w-full object-cover"
                 />
-                <div className="absolute bottom-0 z-10 flex w-full justify-center bg-gradient-to-b from-black/0 to-black/80 pt-8 pb-4">
-                  <h3 className="text-xl font-semibold text-white">{title}</h3>
+                <div className="pointer-events-none absolute bottom-0 z-10 flex w-full justify-center bg-gradient-to-b from-black/0 to-black/80 pt-8 pb-4">
+                  <h3 className="text-xl font-semibold text-white max-md:text-sm">
+                    {title}
+                  </h3>
                 </div>
                 {/* Gallery Control */}
                 <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center gap-2">
@@ -57,10 +59,10 @@ const DetailProduct = (props) => {
                         )
                       }
                     >
-                      <RiArrowLeftSLine size={64} />
+                      <RiArrowLeftSLine className="h-16 w-16 max-md:h-8 max-md:w-8" />
                     </button>
                     <button
-                      className="text-white/60  transition-all hover:text-white"
+                      className="text-white/60 transition-all hover:text-white"
                       onClick={() =>
                         setCurrentImage(
                           productImages?.length - 1 === currentImage
@@ -69,7 +71,7 @@ const DetailProduct = (props) => {
                         )
                       }
                     >
-                      <RiArrowRightSLine size={64} />
+                      <RiArrowRightSLine className="h-16 w-16 max-md:h-8 max-md:w-8" />
                     </button>
                   </div>
                 </div>
