@@ -66,8 +66,9 @@ const Home = () => {
         <Map
           className={`mt-4 ${
             menuShowMap.includes(currentMenu) ? "" : "desktop:hidden"
-          } max-desktop:order-3 max-desktop:m-4 max-desktop:mx-auto`}
+          } max-desktop:order-3 max-desktop:m-4 relative max-desktop:mx-auto`}
         />
+        
         {menuShowFloatingHubungi.includes(currentMenu) && <FloatingHubungi />}
       </main>
     </>

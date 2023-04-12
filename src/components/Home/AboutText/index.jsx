@@ -17,7 +17,7 @@ const AboutText = (props) => {
             Bengkel restu teknik mulai beroperasi sejak tahun 2000-an. Dimulai
             dari bengkel kecil sederhana, kami terus berbenah diri untuk
             memberikan pelayanan yang lebih baik kepada para konsumen. Kontak
-            kami WA : 0821-4547-3960
+            kami WA : 081-335-763-070
           </p>
         </div>
         <button
