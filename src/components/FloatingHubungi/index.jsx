@@ -37,7 +37,7 @@ const FloatingHubungi = () => {
     <>
       <div ref={fixedRef} className="fixed bottom-0 h-2 w-2"></div>
       <a
-        href={SOCIAL_MEDIA_LINK.WHATSAPP}
+        href={SOCIAL_MEDIA_LINK.WHATSAPP2}
         target="_blank"
         rel="noreferrer"
         className={`group fixed right-4 z-40 ml-auto flex w-fit cursor-pointer flex-col items-end gap-2 transition-all hover:-translate-y-1 ${

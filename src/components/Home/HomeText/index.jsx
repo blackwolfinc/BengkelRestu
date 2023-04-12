@@ -40,9 +40,14 @@ const HomeText = (props) => {
         <div className="mx-auto my-auto hidden w-full max-desktop:block">
           <img src={LogoLG} alt="logo" className="mx-auto w-3/4" />
         </div>
-        <button className="mx-auto hidden w-fit rounded-lg border border-primary-dark bg-primary-light py-2 px-4 text-white max-desktop:block">
+        <a
+          href={SOCIAL_MEDIA_LINK.WHATSAPP2}
+          target="_blank"
+          rel="noreferrer"
+          className="mx-auto hidden w-fit rounded-lg border border-primary-dark bg-primary-light py-2 px-4 text-white max-desktop:block"
+        >
           <span className="font-jura text-xl">Contact Us</span>
-        </button>
+        </a>
         <div className="mt-20 hidden items-center justify-center gap-4 max-desktop:flex">
           <a
             href={SOCIAL_MEDIA_LINK.FACEBOOK}
