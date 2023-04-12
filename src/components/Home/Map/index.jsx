@@ -8,6 +8,7 @@ const Map = (props) => {
     <div
       className={`w-fit overflow-hidden rounded-lg border-[6px] border-black/50 ${className}`}
     >
+    <a href="https://goo.gl/maps/ComnFQ9gto93tzVH9" className="absolute  w-[100%] h-[18rem]  z-30"></a>
     <img className="absolute z-40 top-0 w-[100%] mt-[-5rem] opacity-80 hidden sm:flex sm:hover:hidden" src={DepanBengkel}></img>
       <iframe
         title="Bengkel Las Dan Bubut RESTU"
