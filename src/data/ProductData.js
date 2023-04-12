@@ -1,5 +1,13 @@
 import RollPlat1 from "../assets/img/RoolPlat.jpg";
+import RollPlat2 from "../assets/img/roll-plat-2.jpeg";
+import RollPlat3 from "../assets/img/roll-plat-3.jpeg";
+import RollPlat4 from "../assets/img/roll-plat-4.jpeg";
+import RollPlat5 from "../assets/img/roll-plat-5.jpeg";
 import Las1 from "../assets/img/welding-bg.png";
+import Las2 from "../assets/img/las-2.jpg";
+import Las3 from "../assets/img/las-3.jpg";
+import Las4 from "../assets/img/las-4.jpg";
+import Las5 from "../assets/img/las-5.jpg";
 import Pompa1 from "../assets/img/pompa-1.JPG";
 import Pompa2 from "../assets/img/pompa-2.JPG";
 import Pompa3 from "../assets/img/pompa-3.JPG";
@@ -21,6 +29,7 @@ const ProductData = [
   {
     image: Bubut,
     productImages: [
+      Bubut,
       Bubut1,
       Bubut2,
       Bubut3,
@@ -38,14 +47,14 @@ const ProductData = [
   },
   {
     image: Las1,
-    productImages: [Las1],
+    productImages: [Las1, Las2, Las3, Las4, Las5],
     title: "Las Professional",
     description:
       "Bengkel restu teknik juga melayani jasa pengelasan yang dikerjakan oleh tangan-tangan profesional. Untuk informasi selanjutnya silahkan hubungi kontak kami.",
   },
   {
     image: RollPlat1,
-    productImages: [RollPlat1],
+    productImages: [RollPlat1, RollPlat2, RollPlat3, RollPlat4, RollPlat5],
     title: "Roll Plat",
     description:
       "Bengkel kami juga melayani jasa dan pemesanan roll plat untuk kebutuhan permesinan industri pabrik dll. Silahkan hubungi kontak kami",
