@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import FloatingHubungi from "../../components/FloatingHubungi";
 import { MenuContext } from "../../helpers/context";
 import AboutText from "../../components/Home/AboutText";
@@ -11,46 +11,56 @@ import ProductData from "../../data/ProductData";
 
 const Home = () => {
   const { currentMenu, selectedDetailProduct } = useContext(MenuContext);
+  const [prevMenu, setPrevMenu] = useState(currentMenu);
+  const [currentMenuIn, setCurrentMenuIn] = useState("");
+  const [currentMenuOut, setCurrentMenuOut] = useState("");
   const menuShowMap = ["home", "about", "ourwork"];
   const menuShowFloatingHubungi = ["home", "about", "ourwork"];
+
+  useEffect(() => {
+    setPrevMenu(currentMenu);
+    setCurrentMenuOut(prevMenu);
+    setCurrentMenuIn(currentMenu);
+
+    setTimeout(() => {
+      setCurrentMenuOut("");
+      setCurrentMenuIn("");
+    }, 1000);
+  }, [currentMenu]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const checkMenuClass = (menu) => {
+    if (currentMenuIn === menu) {
+      return "desktop:animate-[menuIn_1s_ease-in-out_forwards]";
+    }
+
+    if (currentMenuOut === menu) {
+      return "desktop:!absolute desktop:top-0 desktop:animate-[menuOut_1s_ease-in-out_forwards]";
+    }
+
+    if (currentMenu !== menu) {
+      return "desktop:hidden";
+    }
+
+    return "";
+  };
 
   return (
     <>
       <main className="relative mx-auto my-10 max-w-lg max-desktop:my-0 max-desktop:flex max-desktop:flex-col max-desktop:bg-primary-dark-2 desktop:animate-[initialLoad_2s_ease-in-out_forwards]">
-        <HomeText
-          className={`${
-            currentMenu === "home"
-              ? "desktop:animate-[menuIn_1s_ease-in-out_forwards]"
-              : "desktop:!absolute desktop:top-0 desktop:animate-[menuOut_1s_ease-in-out_forwards]"
-          } max-desktop:order-0`}
-        />
+        <HomeText className={`${checkMenuClass("home")} max-desktop:order-0`} />
         <AboutText
-          className={`${
-            currentMenu === "about"
-              ? "desktop:animate-[menuIn_1s_ease-in-out_forwards]"
-              : "desktop:!absolute desktop:top-0 desktop:animate-[menuOut_1s_ease-in-out_forwards]"
-          } max-desktop:order-4`}
+          className={`${checkMenuClass("about")} max-desktop:order-4`}
         />
         <OurWorkText
-          className={`${
-            currentMenu === "ourwork"
-              ? "desktop:animate-[menuIn_1s_ease-in-out_forwards]"
-              : "desktop:!absolute desktop:top-0 desktop:animate-[menuOut_1s_ease-in-out_forwards]"
-          } max-desktop:order-2`}
+          className={`${checkMenuClass("ourwork")} max-desktop:order-2`}
         />
         <Product
-          className={`${
-            currentMenu === "product"
-              ? "desktop:animate-[menuIn_1s_ease-in-out_forwards]"
-              : "desktop:!absolute desktop:top-0 desktop:animate-[menuOut_1s_ease-in-out_forwards]"
-          } max-desktop:order-1`}
+          className={`${checkMenuClass("product")} max-desktop:order-1`}
         />
         <DetailProduct
-          className={`max-desktop:hidden max-desktop:pt-20 ${
-            currentMenu === "detailproduct"
-              ? "desktop:animate-[menuIn_1s_ease-in-out_forwards]"
-              : "desktop:!absolute desktop:top-0 desktop:animate-[menuOut_1s_ease-in-out_forwards]"
-          }`}
+          className={`max-desktop:hidden max-desktop:pt-20 ${checkMenuClass(
+            "detailproduct"
+          )}`}
           {...ProductData[selectedDetailProduct]}
         />
         <Map
