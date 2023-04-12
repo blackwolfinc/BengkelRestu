@@ -1,10 +1,11 @@
-import RollPlat1 from "../assets/img/roll-plat-1.jpg";
-import Las1 from "../assets/img/las-1.jpg";
+import RollPlat1 from "../assets/img/RoolPlat.jpg";
+import Las1 from "../assets/img/welding-bg.png";
 import Pompa1 from "../assets/img/pompa-1.JPG";
 import Pompa2 from "../assets/img/pompa-2.JPG";
 import Pompa3 from "../assets/img/pompa-3.JPG";
 import Pompa4 from "../assets/img/pompa-4.JPG";
 import Pompa5 from "../assets/img/pompa-5.JPG";
+import Bubut from "../assets/img/bubut.png";
 import Bubut1 from "../assets/img/bubut-1.jpg";
 import Bubut2 from "../assets/img/bubut-2.jpg";
 import Bubut3 from "../assets/img/bubut-3.jpg";
@@ -18,7 +19,7 @@ import Bubut10 from "../assets/img/bubut-10.jpg";
 
 const ProductData = [
   {
-    image: Bubut1,
+    image: Bubut,
     productImages: [
       Bubut1,
       Bubut2,
@@ -50,7 +51,7 @@ const ProductData = [
       "Bengkel kami juga melayani jasa dan pemesanan roll plat untuk kebutuhan permesinan industri pabrik dll. Silahkan hubungi kontak kami",
   },
   {
-    image: Pompa1,
+    image: Pompa5,
     productImages: [Pompa1, Pompa2, Pompa3, Pompa4, Pompa5],
     title: "Pompa Sedot Pasir",
     description:
