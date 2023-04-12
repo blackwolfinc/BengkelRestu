@@ -30,9 +30,10 @@ const Footer = () => {
               <h6>PHONE</h6>
               <div className="flex items-center gap-2 text-sm">
                 <AiOutlineWhatsApp />
-                <p className="font-jura text-xs">
-                  0857-8425-8128, 0821-4547-3960
-                </p>
+             
+                <a href="tel:+081355763070" className="font-jura text-xs">
+                 081-335-763-070
+                </a>
               </div>
             </div>
             <div className="flex flex-col gap-1 p-6">
