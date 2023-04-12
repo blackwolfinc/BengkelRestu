@@ -22,7 +22,7 @@ const MainLayout = ({ children }) => {
         setSelectedDetailProduct,
       }}
     >
-      <div className="w-screen">
+      <div className="max-w-screen overflow-x-hidden">
         <ImageBackground
           images={[DummyImage1, DummyImage2]}
           disabled={width < 1280}

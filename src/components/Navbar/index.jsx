@@ -17,7 +17,7 @@ const Navbar = () => {
     "font-jura text-white transition-all duration-150 ease-in-out hover:text-active";
 
   return (
-    <nav className="z-50 min-w-full bg-primary-dark/90 max-desktop:fixed max-desktop:top-0">
+    <nav className="z-50 min-w-full bg-primary-dark/90 max-desktop:fixed max-desktop:top-0 max-desktop:right-0 max-desktop:left-0">
       <div className="mx-auto flex max-w-lg max-desktop:justify-center">
         <Link
           to={"/"}
