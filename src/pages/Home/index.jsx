@@ -18,6 +18,10 @@ const Home = () => {
   const menuShowFloatingHubungi = ["home", "about", "ourwork"];
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     setPrevMenu(currentMenu);
     setCurrentMenuOut(prevMenu);
     setCurrentMenuIn(currentMenu);
