@@ -22,10 +22,14 @@ const Home = () => {
     setCurrentMenuOut(prevMenu);
     setCurrentMenuIn(currentMenu);
 
-    setTimeout(() => {
+    let timeout = setTimeout(() => {
       setCurrentMenuOut("");
       setCurrentMenuIn("");
     }, 1000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
   }, [currentMenu]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const checkMenuClass = (menu) => {
@@ -46,30 +50,34 @@ const Home = () => {
 
   return (
     <>
-      <div className="relative mx-auto max-w-lg py-10 max-desktop:flex max-desktop:flex-col max-desktop:bg-primary-dark-2 max-desktop:py-0 desktop:animate-[initialLoad_2s_ease-in-out_forwards]">
-        <HomeText className={`${checkMenuClass("home")} max-desktop:order-0`} />
-        <AboutText
-          className={`${checkMenuClass("about")} max-desktop:order-4`}
-        />
-        <OurWorkText
-          className={`${checkMenuClass("ourwork")} max-desktop:order-2`}
-        />
-        <Product
-          className={`${checkMenuClass("product")} max-desktop:order-1`}
-        />
-        <DetailProduct
-          className={`max-desktop:hidden max-desktop:pt-20 ${checkMenuClass(
-            "detailproduct"
-          )}`}
-          {...ProductData[selectedDetailProduct]}
-        />
-        <Map
-          className={`mt-4 ${
-            menuShowMap.includes(currentMenu) ? "" : "desktop:hidden"
-          } relative max-desktop:order-3 max-desktop:m-4 max-desktop:mx-auto`}
-        />
+      <div className="mx-auto max-w-lg py-10 max-desktop:flex max-desktop:flex-col max-desktop:bg-primary-dark-2 max-desktop:py-0 desktop:animate-[initialLoad_2s_ease-in-out_forwards]">
+        <div className="relative">
+          <HomeText
+            className={`${checkMenuClass("home")} max-desktop:order-0`}
+          />
+          <AboutText
+            className={`${checkMenuClass("about")} max-desktop:order-4`}
+          />
+          <OurWorkText
+            className={`${checkMenuClass("ourwork")} max-desktop:order-2`}
+          />
+          <Product
+            className={`${checkMenuClass("product")} max-desktop:order-1`}
+          />
+          <DetailProduct
+            className={`max-desktop:hidden max-desktop:pt-20 ${checkMenuClass(
+              "detailproduct"
+            )}`}
+            {...ProductData[selectedDetailProduct]}
+          />
+          <Map
+            className={`mt-4 ${
+              menuShowMap.includes(currentMenu) ? "" : "desktop:hidden"
+            } relative max-desktop:order-3 max-desktop:m-4 max-desktop:mx-auto`}
+          />
 
-        {menuShowFloatingHubungi.includes(currentMenu) && <FloatingHubungi />}
+          {menuShowFloatingHubungi.includes(currentMenu) && <FloatingHubungi />}
+        </div>
       </div>
     </>
   );
