@@ -7,9 +7,9 @@ import useWindowDimensions from "../helpers/useWindowDimension";
 import DummyImage1 from "../assets/img/welding-bg.png";
 import DummyImage2 from "../assets/img/welding-bg-2.png";
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ children, initialMenu = "home" }) => {
   const { width, height } = useWindowDimensions();
-  const [currentMenu, setCurrentMenu] = useState("home"); // home, about, product, ourwork, detailproduct
+  const [currentMenu, setCurrentMenu] = useState(initialMenu); // home, about, product, ourwork, detailproduct
   const [selectedDetailProduct, setSelectedDetailProduct] = useState(0);
   const menuControlActive = ["home", "about", "ourwork"];
 

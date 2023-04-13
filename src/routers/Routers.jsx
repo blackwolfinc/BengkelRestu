@@ -18,7 +18,7 @@ const Routers = () => {
       <Route
         path="/product/:id"
         element={
-          <MainLayout>
+          <MainLayout initialMenu="detail">
             <Product />
           </MainLayout>
         }

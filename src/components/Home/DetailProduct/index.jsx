@@ -87,7 +87,7 @@ const DetailProduct = (props) => {
                 return (
                   <div
                     key={`product-${index}`}
-                    className="flex aspect-[5/3] w-full cursor-pointer items-center justify-center overflow-hidden"
+                    className="flex w-full cursor-pointer items-center justify-center overflow-hidden max-desktop:h-40 desktop:aspect-[5/3]"
                   >
                     <img
                       src={item}
