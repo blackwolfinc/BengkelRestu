@@ -50,8 +50,8 @@ const Home = () => {
 
   return (
     <>
-      <div className="mx-auto max-w-lg py-10 max-desktop:flex max-desktop:flex-col max-desktop:bg-primary-dark-2 max-desktop:py-0 desktop:animate-[initialLoad_2s_ease-in-out_forwards]">
-        <div className="relative">
+      <div className="mx-auto max-w-lg py-10 max-desktop:py-0">
+        <div className="relative max-desktop:flex max-desktop:flex-col max-desktop:bg-primary-dark-2 desktop:animate-[initialLoad_2s_ease-in-out_forwards]">
           <HomeText
             className={`${checkMenuClass("home")} max-desktop:order-0`}
           />
@@ -75,7 +75,6 @@ const Home = () => {
               menuShowMap.includes(currentMenu) ? "" : "desktop:hidden"
             } relative max-desktop:order-3 max-desktop:m-4 max-desktop:mx-auto`}
           />
-
           {menuShowFloatingHubungi.includes(currentMenu) && <FloatingHubungi />}
         </div>
       </div>
