@@ -1,8 +1,5 @@
-import RollPlat1 from "../assets/img/RoolPlat.jpg";
+import RollPlat1 from "../assets/img/roll-plat-1.jpeg";
 import RollPlat2 from "../assets/img/roll-plat-2.jpeg";
-import RollPlat3 from "../assets/img/roll-plat-3.jpeg";
-import RollPlat4 from "../assets/img/roll-plat-4.jpeg";
-import RollPlat5 from "../assets/img/roll-plat-5.jpeg";
 import Las1 from "../assets/img/welding-bg.png";
 import Las2 from "../assets/img/las-2.jpg";
 import Las3 from "../assets/img/las-3.jpg";
@@ -13,6 +10,7 @@ import Pompa2 from "../assets/img/pompa-2.JPG";
 import Pompa3 from "../assets/img/pompa-3.JPG";
 import Pompa4 from "../assets/img/pompa-4.JPG";
 import Pompa5 from "../assets/img/pompa-5.JPG";
+import Pompa6 from "../assets/img/pompa-6.jpeg";
 import Bubut from "../assets/img/bubut.png";
 import Bubut1 from "../assets/img/bubut-1.jpg";
 import Bubut2 from "../assets/img/bubut-2.jpg";
@@ -54,14 +52,14 @@ const ProductData = [
   },
   {
     image: RollPlat1,
-    productImages: [RollPlat1, RollPlat2, RollPlat3, RollPlat4, RollPlat5],
+    productImages: [RollPlat1, RollPlat2],
     title: "Roll Plat",
     description:
       "Bengkel kami juga melayani jasa dan pemesanan roll plat dan roll as ukuran kecil untuk kebutuhan permesinan industri pabrik dll. Silahkan hubungi kontak kami.",
   },
   {
     image: Pompa5,
-    productImages: [Pompa1, Pompa2, Pompa3, Pompa4, Pompa5],
+    productImages: [Pompa1, Pompa2, Pompa3, Pompa4, Pompa5, Pompa6],
     title: "Pompa Sedot Pasir",
     description: `Bengkel kami menyediakan berbagai pompa sedot pasir, sedot limbah, dan sedot lumpur, dengan ukuran 2,5" sampai 8". Untuk informasi lebih lanjut cek foto-foto di bawah ini, atau langsung hubungi kontak kami`,
   },
