@@ -57,14 +57,13 @@ const ProductData = [
     productImages: [RollPlat1, RollPlat2, RollPlat3, RollPlat4, RollPlat5],
     title: "Roll Plat",
     description:
-      "Bengkel kami juga melayani jasa dan pemesanan roll plat untuk kebutuhan permesinan industri pabrik dll. Silahkan hubungi kontak kami",
+      "Bengkel kami juga melayani jasa dan pemesanan roll plat dan roll as ukuran kecil untuk kebutuhan permesinan industri pabrik dll. Silahkan hubungi kontak kami.",
   },
   {
     image: Pompa5,
     productImages: [Pompa1, Pompa2, Pompa3, Pompa4, Pompa5],
     title: "Pompa Sedot Pasir",
-    description:
-      "Bengkel kami menyediakan berbagai pompa sedot pasir, sedot limbah, dan sedot lumpur, dengan berbagai macam ukuran sesuai pesanan anda. Untuk informasi lebih lanjut cek foto-foto di bawah ini, atau langsung hubungi kontak kami.",
+    description: `Bengkel kami menyediakan berbagai pompa sedot pasir, sedot limbah, dan sedot lumpur, dengan ukuran 2,5" sampai 8". Untuk informasi lebih lanjut cek foto-foto di bawah ini, atau langsung hubungi kontak kami`,
   },
 ];
 
